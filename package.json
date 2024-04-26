@@ -9,6 +9,7 @@
     "@babel/plugin-transform-numeric-separator": "^7.24.1",
     "@babel/plugin-transform-optional-chaining": "^7.24.1",
     "@babel/plugin-transform-private-methods": "^7.24.1",
+    "@fontsource/raleway": "^5.0.18",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
@@ -21,6 +22,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.3",
     "react-scripts": "^5.0.1",
+    "typeface-raleway": "^1.1.13",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
