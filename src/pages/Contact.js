@@ -1,10 +1,11 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 import contactImg from '../images/contactImg.jpg';
 import '../styles/Contact.css';
 
 function Contact() {
   const formRef = useRef();
+  const [showConfirmation, setShowConfirmation] = useState(false);
 
   function sendEmail(e) {
     e.preventDefault();
@@ -12,10 +13,13 @@ function Contact() {
     emailjs.sendForm('service_hm1ouxt', 'template_zukg4i1', formRef.current, 'cmnp_z7hvQERzhs1s')
       .then((result) => {
         console.log(result.text);
-        
+        setShowConfirmation(true); // Show confirmation message
+        setTimeout(() => {
+          setShowConfirmation(false); // Hide confirmation message after 2 seconds
+        }, 2500);
       }, (error) => {
         console.log(error.text);
-        
+        // Add error handling logic here
       });
   }
 
@@ -34,8 +38,9 @@ function Contact() {
           <label htmlFor='message'>Message</label>
           <textarea rows="6" placeholder='Enter Message' name='message' required></textarea>
 
-          <button type='submit'>Send Message</button>
+          <button type='submit' onClick={() => setShowConfirmation(true)}>Send Message</button>
         </form>
+        {showConfirmation && <div className="popup">Thank you for the message!</div>}
       </div>
     </div>
   );
