@@ -17,7 +17,7 @@ export const ShopList = [
     {
     name: "Sci-Fi-Fantasy Deck",
     image: Deck,
-    price:  89.95 
+    price:  89.95
     },
 
     {

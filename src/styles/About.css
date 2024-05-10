@@ -20,18 +20,17 @@
   height: 55%;
   align-items: center;
   margin-top: 50px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; /* Maintain font consistency */
 }
 
 .aboutBottom p {
-  width: 1200px;
+  max-width: 90%; /* Adjusted to a percentage-based width for better responsiveness */
 }
 
 .about .aboutBottom h1 {
   font-weight: 400;
-  font-size: 70px;
+  font-size: 3em; /* Adjusted font size for better readability */
   color: black;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  transform: translateY(-40px);
+  margin-top: 20px; /* Added margin top for spacing */
+  max-width: 300px;
 }

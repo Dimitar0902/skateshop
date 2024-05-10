@@ -13,13 +13,13 @@ function Contact() {
     emailjs.sendForm('service_hm1ouxt', 'template_zukg4i1', formRef.current, 'cmnp_z7hvQERzhs1s')
       .then((result) => {
         console.log(result.text);
-        setShowConfirmation(true); // Show confirmation message
+        setShowConfirmation(true); 
         setTimeout(() => {
-          setShowConfirmation(false); // Hide confirmation message after 2 seconds
+          setShowConfirmation(false); 
         }, 2500);
       }, (error) => {
         console.log(error.text);
-        // Add error handling logic here
+        
       });
   }
 
@@ -35,8 +35,8 @@ function Contact() {
           <label htmlFor='email'>Email</label>
           <input name='email' placeholder='Enter Email' type='email'/>
 
-          <label htmlFor='message'>Message</label>
-          <textarea rows="6" placeholder='Enter Message' name='message' required></textarea>
+          <label htmlFor='project'>Message</label>
+          <textarea rows="6" placeholder='Enter Message' name='project' required></textarea>
 
           <button type='submit' onClick={() => setShowConfirmation(true)}>Send Message</button>
         </form>
